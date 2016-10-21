@@ -5,8 +5,10 @@ This is a python based script which notifies the user with new set of words with
 the whole project can be divided into two parts :  
 + data extraction from the web   
 + UI and Web development.  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/cat-prep-logo.jpg" width="300" STYLE="position:absolute; TOP:35px; LEFT:170px; WIDTH:50px; HEIGHT:50px">   
-Click the cat logo to start the notification  
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/cat-prep-logo.jpg" width="300" STYLE="position:absolute; TOP:35px; LEFT:170px; WIDTH:50px; HEIGHT:50px">   
+
+
 ![cat-prep](images/cat-prep.gif)
 
 ### data extraction  
