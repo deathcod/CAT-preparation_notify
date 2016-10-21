@@ -5,9 +5,10 @@ This is a python based script which notifies the user with new set of words with
 the whole project can be divided into two parts :  
 + data extraction from the web   
 + UI and Web development.  
-<img src="images/cat-prep-logo.jpg" width="300" STYLE="position:absolute; TOP:35px; LEFT:170px; WIDTH:50px; HEIGHT:50px">   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/cat-prep-logo.jpg" width="300" STYLE="position:absolute; TOP:35px; LEFT:170px; WIDTH:50px; HEIGHT:50px">   
 Click the cat logo to start the notification  
 ![cat-prep](images/cat-prep.gif)
+
 ### data extraction  
 first of all I extracted the data from previous year CAT,TOEFL,GRE etc which were spectifically complete the sentence with suitable words.  
 Since the raw data is not suitable to be manupulated so, using regular expression I manupulated the whole data, and extracted the meaningful data from it.
@@ -16,7 +17,7 @@ so ```sentence complete.txt``` is the raw data
 ```code.txt``` can be said as structured data  
 ```words.txt``` can be said the list of words that I will be using to get the "word meaning" using rest api was generated using ```words.py```  
 ```words+meaning.csv``` the words and meaning stored which has been extracted using the rest api and the code for meaning extraction can be found in ```words+meaning.py```  
-```database.csv``` the data base of question and the options, was generated using ```database.py```  
+```extract.csv``` the data base of question and the options, was generated using ```extract.py```  
 
 ### **UI and Web Developement**  
 **task1**  
