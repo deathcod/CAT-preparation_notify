@@ -1,14 +1,14 @@
-# **CAT-preparatory-notification**
+# CAT-preparatory-notification
 This is a python based script which notifies the user with new set of words with their meaning and finally take test on those words.
 
-### **details**  
+### details  
 the whole project can be divided into two parts :  
 + data extraction from the web   
 + UI and Web development.  
-<img src="cat-prep-logo.jpg" width="300" STYLE="position:absolute; TOP:35px; LEFT:170px; WIDTH:50px; HEIGHT:50px">   
+<img src="images/cat-prep-logo.jpg" width="300" STYLE="position:absolute; TOP:35px; LEFT:170px; WIDTH:50px; HEIGHT:50px">   
 Click the cat logo to start the notification  
-![cat-prep](cat-prep.gif)
-### **data extraction**  
+![cat-prep](images/cat-prep.gif)
+### data extraction  
 first of all I extracted the data from previous year CAT,TOEFL,GRE etc which were spectifically complete the sentence with suitable words.  
 Since the raw data is not suitable to be manupulated so, using regular expression I manupulated the whole data, and extracted the meaningful data from it.
 
