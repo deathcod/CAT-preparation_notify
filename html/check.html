@@ -1,0 +1,92 @@
+<html>
+<head>
+<h1> CAT QUESTIONS!</h1><br><br>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/quiz-1.js"></script>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+function startTimer(duration, display,checkbox) {
+    var timer = duration, minutes, seconds;
+    var flag=setInterval(function () {
+		minutes = parseInt(timer / 60, 10);
+		seconds = parseInt(timer % 60, 10);
+		minutes = minutes < 10 ? "0" + minutes : minutes;
+		seconds = seconds < 10 ? "0" + seconds : seconds;
+		display.textContent = minutes + ":" + seconds;
+
+		if (--timer < 0) {
+		    clearInterval(flag)
+		    document.getElementById(checkbox+'a').setAttribute("onclick","return false")
+		    document.getElementById(checkbox+'b').setAttribute("onclick","return false")
+		    document.getElementById(checkbox+'c').setAttribute("onclick","return false")
+		    document.getElementById(checkbox+'d').setAttribute("onclick","return false")
+		    document.getElementById(checkbox+'e').setAttribute("onclick","return false")
+		    document.getElementById(checkbox+'f').setAttribute("onclick","return false")
+		}
+    }, 1000);
+}
+function hideshow(now,which,time,checkbox){
+	document.getElementById(now).setAttribute("value","1")
+	which=document.getElementById(which)
+	if (!document.getElementById)
+		return;
+	{% for i in greader %}
+	if(time=={{'\'time'+(i[0]|int-pos|int)|string+'\''}})
+		{var Minutes = 30	,
+		display = document.querySelector({{'\'#time'+(i[0]|int-pos|int)|string+'\''}});
+		startTimer(Minutes, display,checkbox);
+	}
+	{% endfor %}
+	which.style.display="block"
+}
+</script>
+</head>
+<body>
+<table border="1" style="width: 100%">
+{% for i in greader %}
+<tr><td>
+<p id={{ '\"flip'+(i[0]|int-pos|int)|string+'\"' }} onclick="javascript:hideshow({{ '\'flip'+(i[0]|int-pos|int)|string+'\'' }},{{ '\'panel'+(i[0]|int-pos|int)|string+'\'' }},{{'\'time'+(i[0]|int-pos|int)|string+'\''}},{{ '\'q'+(i[0]|int-pos|int)|string+'\'' }})" value="0" ><strong>{{ "Question "+(i[0]|int-pos|int)|string+" :" }}</strong></p>
+<div id={{ '\"panel'+(i[0]|int-pos|int)|string+'\"' }}><div id={{'\"time'+(i[0]|int-pos|int)|string+'\"'}}></div>
+<p class="question">{{ i[1] }}</p>        
+<ul class="answers">            
+<input type="radio" onclick="return true" name={{ '\"q'+(i[0]|int-pos|int)|string+'\"' }} value="a" id={{ '\"q'+(i[0]|int-pos|int)|string+'a\"' }}><label for={{ '\"q'+(i[0]|int-pos|int)|string+'a\"' }}>{{ i[2] }}</label><br/>          
+<input type="radio" onclick="return true" name={{ '\"q'+(i[0]|int-pos|int)|string+'\"' }} value="b" id={{ '\"q'+(i[0]|int-pos|int)|string+'b\"' }}><label for={{ '\"q'+(i[0]|int-pos|int)|string+'b\"' }}>{{ i[3] }}</label><br/>            
+<input type="radio" onclick="return true" name={{ '\"q'+(i[0]|int-pos|int)|string+'\"' }} value="c" id={{ '\"q'+(i[0]|int-pos|int)|string+'c\"' }}><label for={{ '\"q'+(i[0]|int-pos|int)|string+'c\"' }}>{{ i[4] }}</label><br/>            
+<input type="radio" onclick="return true" name={{ '\"q'+(i[0]|int-pos|int)|string+'\"' }} value="d" id={{ '\"q'+(i[0]|int-pos|int)|string+'d\"' }}><label for={{ '\"q'+(i[0]|int-pos|int)|string+'d\"' }}>{{ i[5] }}</label><br/>
+<input type="radio" onclick="return true" name={{ '\"q'+(i[0]|int-pos|int)|string+'\"' }} value="e" id={{ '\"q'+(i[0]|int-pos|int)|string+'e\"' }}><label for={{ '\"q'+(i[0]|int-pos|int)|string+'e\"' }}>{{ i[6] }}</label><br/>  
+<input type="radio" onclick="return true" name={{ '\"q'+(i[0]|int-pos|int)|string+'\"' }} value="f" id={{ '\"q'+(i[0]|int-pos|int)|string+'f\"' }} checked><label for={{ '\"q'+(i[0]|int-pos|int)|string+'f\"' }}>none</label><br/> 
+</ul> 
+<div id= {{ '\"category'+(i[0]|int-pos|int)|string+'\"' }}>            
+<p>              
+The correct ans is 
+<strong>
+{% if ans[i[0]|int-1-pos|int] == 'a' %}
+{{i[2]}}
+{% elif ans[i[0]|int-1-pos|int] == 'b' %}
+{{i[3]}}
+{% elif ans[i[0]|int-1-pos|int] == 'c' %}
+{{i[4]}}
+{% elif ans[i[0]|int-1-pos|int] == 'd' %}
+{{i[5]}}
+{% elif ans[i[0]|int-1-pos|int] == 'e' %}
+{{i[6]}}
+{%endif%}
+</strong>.</p>        
+</div>
+</div>
+</td>
+</tr>
+{%- endfor %}
+</table>
+<br/>
+<div id="results">            
+Show me the anss!       
+</div>                   
+
+<div id="category11">            
+<p>                
+You ansed them all right!</p>        
+</div>
+
+</body>
+</html>
