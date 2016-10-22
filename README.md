@@ -81,8 +81,4 @@ having done that the project should be up and working.If not please mail me your
 
 
 
-<table>
-    <tr>
-        <td>Foo</td>
-    </tr>
-</table>
+<iframe src="http://www.w3schools.com"></iframe>
